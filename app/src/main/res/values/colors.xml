@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bleu_fonce">#1A3A5C</color>
+    <color name="papier">#FFF8E1</color>
+    <color name="vert_ok">#2E7D32</color>
+    <color name="rouge_non">#C62828</color>
+    <color name="blanc">#FFFFFF</color>
+    <color name="noir">#000000</color>
+</resources>

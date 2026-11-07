@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/txt_titre_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Douane Temporelle"
+            android:textColor="@color/bleu_fonce"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_sous_titre_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Formulaire d'enregistrement du voyageur"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_label_nom_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom du voyageur" />
+
+        <EditText
+            android:id="@+id/edit_nom_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex : Marty McFly"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/txt_label_naissance_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Année de naissance" />
+
+        <EditText
+            android:id="@+id/edit_naissance_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex : 1990"
+            android:inputType="number"
+            android:maxLength="4" />
+
+        <TextView
+            android:id="@+id/txt_label_destination_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Année de destination" />
+
+        <EditText
+            android:id="@+id/edit_destination_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ex : 2050"
+            android:inputType="number"
+            android:maxLength="4" />
+
+        <TextView
+            android:id="@+id/txt_label_motif_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Motif du voyage" />
+
+        <Spinner
+            android:id="@+id/spinner_motif_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_inspecter_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Inspecter le profil" />
+
+    </LinearLayout>
+</ScrollView>
