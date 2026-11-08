@@ -3,12 +3,12 @@ package com.example.douanetemporelle;
 
 public class Cles {
 
-    // نومرو بطاقة طالب
-    public static final String MATRICULE = "00001234";
+    // num matricule
+    public static final String MATRICULE = "3012";
 
-    // Static method: ياخو اخر 4 نوامر   m matricule as a parameter  اخر 4 نوامر  + "_" + إسم
+    // yekhou l matricule parametre
     public static String construireCle(String matricule, String nomCle) {
-        // ياخو اخر 4 نوامر م  matricule
+        // yekhou ekher 4nwemer m matricule
         String quatreChiffres = matricule.substring(matricule.length() - 4);
         return quatreChiffres + "_" + nomCle;
     }

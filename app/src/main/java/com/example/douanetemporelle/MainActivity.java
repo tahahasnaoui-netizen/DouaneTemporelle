@@ -22,42 +22,42 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // 1) Link the XML views with the Java code
+        // yorbet  xml b java code
         editNom = findViewById(R.id.edit_nom_nj);
         editNaissance = findViewById(R.id.edit_naissance_nj);
         editDestination = findViewById(R.id.edit_destination_nj);
         spinnerMotif = findViewById(R.id.spinner_motif_nj);
         btnInspecter = findViewById(R.id.btn_inspecter_nj);
 
-        // 2) Fill the Spinner with the three travel reasons
+        // y3abi spinner b asbeb mtaa l safra
         String[] motifs = {"Tourisme", "Modification du passé", "Fuite"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_dropdown_item, motifs);
         spinnerMotif.setAdapter(adapter);
 
-        // 3) When the "Inspecter le profil" button is clicked
+        // wa9t nenzlou 3la "Inspecter le profil"
         btnInspecter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                // 4) Read the data entered by the user
+                // ya9ra el data li ktebha l utilisateur
                 String nom = editNom.getText().toString().trim();
                 String sNaissance = editNaissance.getText().toString().trim();
                 String sDestination = editDestination.getText().toString().trim();
                 String motif = spinnerMotif.getSelectedItem().toString();
 
-                // 5) Check that the fields are not empty
+                // ychoufha fergha wale
                 if (nom.isEmpty() || sNaissance.isEmpty() || sDestination.isEmpty()) {
                     Toast.makeText(MainActivity.this,
                             "Veuillez remplir tous les champs", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                // 6) Convert the years from text to integers
+                // ybadel l 3am m text l integer
                 int naissance = Integer.parseInt(sNaissance);
                 int destination = Integer.parseInt(sDestination);
 
-                // 7) Check that the destination year is greater than the birth year
+                // ythabet date destination akber m date naissance
                 if (destination <= naissance) {
                     Toast.makeText(MainActivity.this,
                             "L'année de destination doit être supérieure à l'année de naissance",
@@ -65,13 +65,13 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                // 8) Compute the temporal age = destination year - birth year
+                // ye7seb temporal age
                 int ageTemporel = destination - naissance;
 
-                // 9) Create an explicit Intent to go to VerificationActivity
+
                 Intent intent = new Intent(MainActivity.this, VerificationActivity.class);
 
-                // 10) Send the data using keys built by a static method (not hardcoded)
+                // yab3ath e data
                 intent.putExtra(Cles.cleNom(Cles.MATRICULE), nom);
                 intent.putExtra(Cles.cleNaissance(Cles.MATRICULE), naissance);
                 intent.putExtra(Cles.cleDestination(Cles.MATRICULE), destination);
