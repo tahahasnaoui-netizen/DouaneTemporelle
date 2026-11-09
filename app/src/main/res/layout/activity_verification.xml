@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fond_billet"
+    android:orientation="horizontal"
+    android:weightSum="1">
+
+    <!-- Partie gauche : image (poids 0.3) -->
+    <ImageView
+        android:id="@+id/img_passeport_nj"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_passeport" />
+
+    <!-- Partie droite : RelativeLayout (poids 0.7) -->
+    <RelativeLayout
+        android:id="@+id/layout_infos_nj"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.7"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txt_titre_billet_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PASSEPORT TEMPOREL"
+            android:textColor="@color/bleu_fonce"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_nom_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_titre_billet_nj"
+            android:layout_marginTop="16dp"
+            android:text="Nom"
+            android:textColor="@color/noir"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_age_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_nom_nj"
+            android:layout_marginTop="8dp"
+            android:text="Âge temporel"
+            android:textColor="@color/noir"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_motif_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_age_nj"
+            android:layout_marginTop="8dp"
+            android:text="Motif"
+            android:textColor="@color/noir"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_naissance_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_motif_nj"
+            android:layout_marginTop="8dp"
+            android:text="Naissance"
+            android:textColor="@color/noir"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_destination_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_naissance_nj"
+            android:layout_marginTop="8dp"
+            android:text="Destination"
+            android:textColor="@color/noir"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_alerte_nj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_destination_nj"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/rouge_non"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_approuver_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_refuser_nj"
+            android:text="Approuver le saut temporel" />
+
+        <Button
+            android:id="@+id/btn_refuser_nj"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Refuser (Risque de paradoxe)" />
+
+    </RelativeLayout>
+</LinearLayout>
